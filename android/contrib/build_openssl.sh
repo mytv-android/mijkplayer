@@ -98,9 +98,9 @@ case "$FF_TARGET" in
     ;;
     all|all64)
 	build aarch64-linux-android arm64 android-arm64 21
-	build x86_64-linux-android x86_64 android-x86_64 21
+	# build x86_64-linux-android x86_64 android-x86_64 21
 	build armv7a-linux-androideabi armv7a android-arm 16
-	build i686-linux-android x86 android-x86 16
+	# build i686-linux-android x86 android-x86 16
     ;;
     clean)
         echo "$FF_ACT_ARCHS_ALL"
