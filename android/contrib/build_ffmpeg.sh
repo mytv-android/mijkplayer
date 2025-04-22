@@ -85,7 +85,7 @@ armv7a)
     CC=${CROSS_PREFIX}$API-clang
     CXX=CC=${CROSS_PREFIX}$API-clang++
     OPTIMIZE_CFLAGS="-march=$CPU"
-    CROSS_PREFIX=$TOOLCHAIN/bin/arm-linux-androideabi
+    CROSS_PREFIX=$TOOLCHAIN/bin/arm-linux-androideabi-
     #build_start
 
     ;;
@@ -102,6 +102,7 @@ arm64)
     CC=${CROSS_PREFIX}$API-clang
     CXX=CC=${CROSS_PREFIX}$API-clang++
     OPTIMIZE_CFLAGS="-march=$CPU"
+    CROSS_PREFIX=$TOOLCHAIN/bin/aarch64-linux-android-
     #build_start
     ;;
 x86)
@@ -153,7 +154,6 @@ check)
     ;;
 esac
 
-cross_prefix=$CROSS_PREFIX-
 #----------
 # ijkffmpeg公共配置
 export COMMON_FF_CFG_FLAGS=
