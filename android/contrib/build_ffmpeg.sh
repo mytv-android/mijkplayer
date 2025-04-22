@@ -29,7 +29,7 @@ CC=
 CXX=
 OPTIMIZE_CFLAGS=
 
-TOOLCHAIN=/content/Android/ndk/23.2.8568313//toolchains/llvm/prebuilt/linux-x86_64
+TOOLCHAIN=$ANDROID_NDK/toolchains/llvm/prebuilt/linux-x86_64
 SYSROOT=$TOOLCHAIN/sysroot
 # 附属于ldflags，用于启用libsoxr\openssl拼接参数
 FF_DEP_LIBS=
@@ -81,10 +81,11 @@ armv7a)
     CPU=armv7-a
     ARCH=arm
     API=16
-    CROSS_PREFIX=$TOOLCHAIN/bin/armv7a-linux-androideabi$API-
-    CC=${CROSS_PREFIX}clang
-    CXX=CC=${CROSS_PREFIX}clang++
+    CROSS_PREFIX=$TOOLCHAIN/bin/armv7a-linux-androideabi
+    CC=${CROSS_PREFIX}$API-clang
+    CXX=CC=${CROSS_PREFIX}$API-clang++
     OPTIMIZE_CFLAGS="-march=$CPU"
+    CROSS_PREFIX=$TOOLCHAIN/bin/arm-linux-androideabi
     #build_start
 
     ;;
@@ -97,9 +98,9 @@ arm64)
     CPU=armv8-a
     ARCH=arm64
     API=21
-    CROSS_PREFIX=$TOOLCHAIN/bin/aarch64-linux-android$API-
-    CC=${CROSS_PREFIX}clang
-    CXX=CC=${CROSS_PREFIX}clang++
+    CROSS_PREFIX=$TOOLCHAIN/bin/aarch64-linux-android
+    CC=${CROSS_PREFIX}$API-clang
+    CXX=CC=${CROSS_PREFIX}$API-clang++
     OPTIMIZE_CFLAGS="-march=$CPU"
     #build_start
     ;;
@@ -152,6 +153,7 @@ check)
     ;;
 esac
 
+cross_prefix=$CROSS_PREFIX-
 #----------
 # ijkffmpeg公共配置
 export COMMON_FF_CFG_FLAGS=

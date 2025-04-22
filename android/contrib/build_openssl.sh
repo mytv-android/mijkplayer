@@ -10,7 +10,7 @@ if [ -z "$FF_TARGET" ]; then
     exit 1
 fi
 #NDK路径，openssl需要ANDROID_NDK_ROOT变量，所以把它export一下
-export ANDROID_NDK_HOME=/content/Android/ndk/23.2.8568313
+export ANDROID_NDK_HOME=$ANDROID_NDK
 export PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
 #编译平台，我这里是mac是darwin-x86_64   linux是linux-x86_64
 HOST_TAG=linux-x86_64
@@ -65,7 +65,7 @@ function build() {
     echo "===================="
     echo "[*] Finished"
     echo "===================="
-
+    cd ..
 }
 
 #----------

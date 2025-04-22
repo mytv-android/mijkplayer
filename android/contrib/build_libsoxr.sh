@@ -56,7 +56,7 @@ case "$FF_TARGET" in
 esac
 
 # 设置NDK路径  
-NDK_PATH=/home/mahongyin/Android/Sdk/ndk/ndk14
+NDK_PATH=$ANDROID_NDK
 
 # 设置SoXr源代码路径  
 SOXR_SRC_PATH=./libsoxr-$FF_TARGET
