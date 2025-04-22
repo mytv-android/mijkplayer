@@ -33,14 +33,22 @@ static void func_destroy(IJKFF_Pipenode *node)
 {
     // do nothing
 }
-
+/**
+ * MARK 同步视频解码
+ * @param node
+ * @return
+ */
 static int func_run_sync(IJKFF_Pipenode *node)
 {
     IJKFF_Pipenode_Opaque *opaque = node->opaque;
 
     return ffp_video_thread(opaque->ffp);
 }
-
+/**
+ * MARK 创建视频解码器
+ * @param ffp
+ * @return
+ */
 IJKFF_Pipenode *ffpipenode_create_video_decoder_from_ffplay(FFPlayer *ffp)
 {
     IJKFF_Pipenode *node = ffpipenode_alloc(sizeof(IJKFF_Pipenode_Opaque));
