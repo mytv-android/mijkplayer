@@ -18,8 +18,8 @@
 
 # IJK_FFMPEG_UPSTREAM=git://git.videolan.org/ffmpeg.git
 IJK_FFMPEG_UPSTREAM=https://github.com/Bilibili/FFmpeg.git
-IJK_FFMPEG_FORK=https://gitee.com/mahongyin/ff6.1.1.git
-IJK_FFMPEG_COMMIT=ff6.1.1--ijk0.8.8
+IJK_FFMPEG_FORK=https://github.com/mytv-android/FFmpeg
+IJK_FFMPEG_COMMIT=main
 IJK_FFMPEG_LOCAL_REPO=extra/ffmpeg
 
 set -e
@@ -42,8 +42,8 @@ function pull_fork()
 
 pull_fork "armv7a"
 pull_fork "arm64"
-pull_fork "x86"
-pull_fork "x86_64"
+# pull_fork "x86"
+# pull_fork "x86_64"
 
 ./init-config.sh
 ./init-android-libyuv.sh
