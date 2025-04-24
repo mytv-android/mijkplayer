@@ -80,7 +80,7 @@ armv7a)
 
     CPU=armv7-a
     ARCH=arm
-    API=16
+    API=21
     CROSS_PREFIX=$TOOLCHAIN/bin/armv7a-linux-androideabi
     CC=${CROSS_PREFIX}$API-clang
     CXX=CC=${CROSS_PREFIX}$API-clang++
@@ -113,7 +113,7 @@ x86)
 
     CPU=x86
     ARCH=x86
-    API=16
+    API=21
     CROSS_PREFIX=$TOOLCHAIN/bin/i686-linux-android$API-
     CC=${CROSS_PREFIX}clang
     CXX=CC=${CROSS_PREFIX}clang++

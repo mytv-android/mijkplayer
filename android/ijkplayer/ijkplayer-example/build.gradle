@@ -12,7 +12,7 @@ android {
     }
     defaultConfig {
         applicationId "tv.danmaku.ijk.media.example"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
@@ -24,7 +24,7 @@ android {
         }
     }
     productFlavors {
-        all32 { minSdkVersion 16 }
+        all32 { minSdkVersion 21 }
         all64 { minSdkVersion 21 }
         // armv7a {}
         // arm64 { minSdkVersion 21 }

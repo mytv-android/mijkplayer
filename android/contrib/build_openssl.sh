@@ -15,7 +15,7 @@ export PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
 #编译平台，我这里是mac是darwin-x86_64   linux是linux-x86_64
 HOST_TAG=linux-x86_64
 #Android api版本16/21/
-MIN_SDK_VERSION=16
+MIN_SDK_VERSION=21
 #工具链路径
 TOOLCHAIN=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/$HOST_TAG
 #把工具链加到PATH环境变量
@@ -81,26 +81,26 @@ echo_usage() {
 
 case "$FF_TARGET" in
     armv7a)
-	build armv7a-linux-androideabi armv7a android-arm 16
+	build armv7a-linux-androideabi armv7a android-arm 21
     ;;
     arm64)
         build aarch64-linux-android arm64 android-arm64 21
     ;;
     x86)
-    	build i686-linux-android x86 android-x86 16
+    	build i686-linux-android x86 android-x86 21
     ;;
     x86_64)
     	build x86_64-linux-android x86_64 android-x86_64 21
     ;;
     all32)
-	build armv7a-linux-androideabi armv7a android-arm 16
-	build i686-linux-android x86 android-x86 16
+	build armv7a-linux-androideabi armv7a android-arm 21
+	build i686-linux-android x86 android-x86 21
     ;;
     all|all64)
 	build aarch64-linux-android arm64 android-arm64 21
 	# build x86_64-linux-android x86_64 android-x86_64 21
-	build armv7a-linux-androideabi armv7a android-arm 16
-	# build i686-linux-android x86 android-x86 16
+	build armv7a-linux-androideabi armv7a android-arm 21
+	# build i686-linux-android x86 android-x86 21
     ;;
     clean)
         echo "$FF_ACT_ARCHS_ALL"

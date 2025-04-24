@@ -18,7 +18,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 
 APP_OPTIM := release
-APP_PLATFORM := android-16
+APP_PLATFORM := android-21
 APP_ABI := x86
 NDK_TOOLCHAIN_VERSION=4.9
 APP_PIE := false

@@ -17,7 +17,7 @@ TARGET_ABI=
 FF_ACT_ARCHS_ALL="armv7a arm64 x86 x86_64"
 case "$FF_TARGET" in
     armv7a)
-	API_LEVEL=16
+	API_LEVEL=21
 	TARGET_HOST=armv7a-linux-androideabi
 	TARGET_ABI=armeabi-v7a
     ;;
@@ -27,7 +27,7 @@ case "$FF_TARGET" in
         TARGET_ABI=arm64-v8a
     ;;
     x86)
-	API_LEVEL=16
+	API_LEVEL=21
 	TARGET_HOST=i686-linux-android
 	TARGET_ABI=x86
     ;;
