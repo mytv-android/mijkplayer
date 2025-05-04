@@ -78,9 +78,9 @@ diff --git a/ijkmedia/ijkplayer/Android.mk b/ijkmedia/ijkplayer/Android.mk
 index 92372ab..6c9270d 100644
 --- a/ijkmedia/ijkplayer/Android.mk
 +++ b/ijkmedia/ijkplayer/Android.mk
-@@ -26,7 +26,7 @@ ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
- LOCAL_CFLAGS += -mfloat-abi=soft
- endif
+@@ -26,7 +26,7 @@ # ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
+ # LOCAL_CFLAGS += -mfloat-abi=soft
+ # endif
  LOCAL_CFLAGS += -std=c99
 -LOCAL_LDLIBS += -llog -landroid
 +LOCAL_LDLIBS += -llog -landroid -lm -lz
