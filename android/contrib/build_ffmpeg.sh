@@ -113,10 +113,11 @@ x86)
     CPU=x86
     ARCH=x86
     API=21
-    CROSS_PREFIX=$TOOLCHAIN/bin/i686-linux-android$API-
-    CC=${CROSS_PREFIX}clang
-    CXX=CC=${CROSS_PREFIX}clang++
+    CROSS_PREFIX=$TOOLCHAIN/bin/i686-linux-android
+    CC=${CROSS_PREFIX}$API-clang
+    CXX=CC=${CROSS_PREFIX}$API-clang++
     OPTIMIZE_CFLAGS="-march=i686"
+    CROSS_PREFIX=$TOOLCHAIN/bin/i686-linux-android-
     ADDITIONAL_CONFIGURE_FLAG=--disable-asm
     #build_start
     ;;
@@ -129,10 +130,11 @@ x86_64)
     CPU=x86-64
     ARCH=x86_64
     API=21
-    CROSS_PREFIX=$TOOLCHAIN/bin/x86_64-linux-android$API-
-    CC=${CROSS_PREFIX}clang
-    CXX=CC=${CROSS_PREFIX}clang++
+    CROSS_PREFIX=$TOOLCHAIN/bin/x86_64-linux-android
+    CC=${CROSS_PREFIX}$API-clang
+    CXX=CC=${CROSS_PREFIX}$API-clang++
     OPTIMIZE_CFLAGS="-march=$CPU"
+    CROSS_PREFIX=$TOOLCHAIN/bin/x86_64-linux-android-
     #build_start
     ;;
 clean)
