@@ -44,7 +44,7 @@ FF_CFG_FLAGS=
 FF_PLATFORM_CFG_FLAGS=
 
 FF_EXTRA_CFLAGS=
-FF_EXTRA_LDFLAGS="-WI,-Bsymbolic -Wl,-z,max-page-size=16384"
+FF_EXTRA_LDFLAGS="-Wl,-Bsymbolic -Wl,-z,max-page-size=16384"
 FF_CMAKE_ABI=
 FF_CMAKE_EXTRA_FLAGS=
 

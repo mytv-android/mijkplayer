@@ -19,7 +19,7 @@ FF_SOURCE=$FF_BUILD_ROOT/$FF_BUILD_NAME
 # 各abi单独拼接参数
 FF_CFG_FLAGS=
 FF_EXTRA_CFLAGS=
-FF_EXTRA_LDFLAGS="-WI,-Bsymbolic -Wl,-z,max-page-size=16384"
+FF_EXTRA_LDFLAGS="-Wl,-Bsymbolic -Wl,-z,max-page-size=16384"
 CPU=
 ARCH=
 API=
@@ -109,7 +109,7 @@ x86)
     FF_EXTRA_LDFLAGS="$FF_EXTRA_LDFLAGS"
     FF_ASSEMBLER_SUB_DIRS="x86"
 
-    CPU=x86
+    CPU=i686
     ARCH=x86
     API=21
     CROSS_PREFIX=$TOOLCHAIN/bin/i686-linux-android
