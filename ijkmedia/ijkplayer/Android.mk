@@ -28,7 +28,7 @@ include $(CLEAR_VARS)
 # endif
 # LOCAL_CFLAGS += -std=c99
 LOCAL_CFLAGS += $(CXXFLAGS)
-
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384 
 LOCAL_LDLIBS += -llog -landroid
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)

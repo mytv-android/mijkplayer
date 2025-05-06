@@ -19,8 +19,7 @@ FF_SOURCE=$FF_BUILD_ROOT/$FF_BUILD_NAME
 # 各abi单独拼接参数
 FF_CFG_FLAGS=
 FF_EXTRA_CFLAGS=
-FF_EXTRA_LDFLAGS="-WI,-Bsymbolic"
-
+FF_EXTRA_LDFLAGS="-WI,-Bsymbolic -W1,-z,max-page-size=16384"
 CPU=
 ARCH=
 API=
@@ -75,7 +74,7 @@ armv7a)
     FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-neon"
     FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-thumb"
     FF_EXTRA_CFLAGS="$FF_EXTRA_CFLAGS -march=armv7-a -mcpu=cortex-a8 -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb"
-    FF_EXTRA_LDFLAGS="$FF_EXTRA_LDFLAGS,-Wl,--fix-cortex-a8"
+    FF_EXTRA_LDFLAGS="$FF_EXTRA_LDFLAGS -Wl,--fix-cortex-a8"
     FF_ASSEMBLER_SUB_DIRS="arm"
 
     CPU=armv7-a

@@ -46,7 +46,7 @@ FF_CFG_FLAGS=
 FF_PLATFORM_CFG_FLAGS=
 
 FF_EXTRA_CFLAGS=
-FF_EXTRA_LDFLAGS="-WI,-Bsymbolic"
+FF_EXTRA_LDFLAGS="-WI,-Bsymbolic -W1,-z,max-page-size=16384"
 
 
 

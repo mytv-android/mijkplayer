@@ -55,7 +55,7 @@ FF_DEP_LIBSOXR_LIB=
 FF_CFG_FLAGS=
 
 FF_EXTRA_CFLAGS=
-FF_EXTRA_LDFLAGS="-WI,-Bsymbolic"
+FF_EXTRA_LDFLAGS="-WI,-Bsymbolic "
 
 FF_DEP_LIBS=
 
@@ -91,7 +91,7 @@ if [ "$FF_ARCH" = "armv7a" ]; then
     FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-thumb"
 
     FF_EXTRA_CFLAGS="$FF_EXTRA_CFLAGS -march=armv7-a -mcpu=cortex-a8 -mfpu=vfpv3-d16 -mfloat-abi=softfp -mthumb"
-    FF_EXTRA_LDFLAGS="$FF_EXTRA_LDFLAGS,-Wl,--fix-cortex-a8"
+    FF_EXTRA_LDFLAGS="$FF_EXTRA_LDFLAGS -Wl,--fix-cortex-a8"
 
     FF_ASSEMBLER_SUB_DIRS="arm"
 
