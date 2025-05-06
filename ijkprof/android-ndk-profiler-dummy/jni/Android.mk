@@ -18,7 +18,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 
 LOCAL_PATH := $(call my-dir)
-
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384
 include $(CLEAR_VARS)
 
 LOCAL_MODULE    := android-ndk-profiler

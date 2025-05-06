@@ -7,8 +7,6 @@ ios/ffmpeg-*
 ios/openssl-*
 extra
 .DS_Store
-ijkmedia/ijkyuv/
-ijkmedia/ijksoundtouch
 ijkprof/android-ndk-profiler/
 
 # built application files

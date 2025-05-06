@@ -28,8 +28,8 @@ TOOLS=tools
 echo "== pull libyuv base =="
 sh $TOOLS/pull-repo-base.sh $IJK_LIBYUV_UPSTREAM $IJK_LIBYUV_LOCAL_REPO
 
-echo "== pull libyuv fork =="
-sh $TOOLS/pull-repo-ref.sh $IJK_LIBYUV_FORK ijkmedia/ijkyuv ${IJK_LIBYUV_LOCAL_REPO}
-cd ijkmedia/ijkyuv
-git checkout ${IJK_LIBYUV_COMMIT}
+# echo "== pull libyuv fork =="
+# sh $TOOLS/pull-repo-ref.sh $IJK_LIBYUV_FORK ijkmedia/ijkyuv ${IJK_LIBYUV_LOCAL_REPO}
+# cd ijkmedia/ijkyuv
+# git checkout ${IJK_LIBYUV_COMMIT}
 cd -

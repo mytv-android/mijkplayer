@@ -28,8 +28,8 @@ TOOLS=tools
 echo "== pull soundtouch base =="
 sh $TOOLS/pull-repo-base.sh $IJK_SOUNDTOUCH_UPSTREAM $IJK_SOUNDTOUCH_LOCAL_REPO
 
-echo "== pull soundtouch fork =="
-sh $TOOLS/pull-repo-ref.sh $IJK_SOUNDTOUCH_FORK ijkmedia/ijksoundtouch ${IJK_SOUNDTOUCH_LOCAL_REPO}
-cd ijkmedia/ijksoundtouch
-git checkout ${IJK_SOUNDTOUCH_COMMIT}
+# echo "== pull soundtouch fork =="
+# sh $TOOLS/pull-repo-ref.sh $IJK_SOUNDTOUCH_FORK ijkmedia/ijksoundtouch ${IJK_SOUNDTOUCH_LOCAL_REPO}
+# cd ijkmedia/ijksoundtouch
+# git checkout ${IJK_SOUNDTOUCH_COMMIT}
 cd -
