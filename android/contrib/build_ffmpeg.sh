@@ -19,7 +19,7 @@ FF_SOURCE=$FF_BUILD_ROOT/$FF_BUILD_NAME
 # 各abi单独拼接参数
 FF_CFG_FLAGS=
 FF_EXTRA_CFLAGS=
-FF_EXTRA_LDFLAGS="-WI,-Bsymbolic -W1,-z,max-page-size=16384"
+FF_EXTRA_LDFLAGS="-WI,-Bsymbolic -Wl,-z,max-page-size=16384"
 CPU=
 ARCH=
 API=
@@ -52,7 +52,6 @@ FF_DEP_OPENSSL_LIB=$BUILD_DIR/$FF_BUILD_NAME_OPENSSL/output/lib
 FF_DEP_LIBSOXR_INC=$BUILD_DIR/$FF_BUILD_NAME_LIBSOXR/output/include
 FF_DEP_LIBSOXR_LIB=$BUILD_DIR/$FF_BUILD_NAME_LIBSOXR/output/lib
 FF_CFLAGS="-O3 -Wall -pipe \
-    -std=c99 \
     -ffast-math \
     -fstrict-aliasing -Werror=strict-aliasing \
      -Wa,--noexecstack \
