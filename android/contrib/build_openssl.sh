@@ -4,7 +4,7 @@ set -e
 set +x
 
 FF_TARGET=$1
-FF_ACT_ARCHS_ALL="armv7a arm64"
+FF_ACT_ARCHS_ALL="armv7a arm64 x86"
 if [ -z "$FF_TARGET" ]; then
     echo "You must specific an architecture 'arm64, armv7a, x86, x86_64, ...'.\n"
     exit 1
