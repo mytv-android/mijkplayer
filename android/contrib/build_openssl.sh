@@ -4,7 +4,7 @@ set -e
 set +x
 
 FF_TARGET=$1
-FF_ACT_ARCHS_ALL="armv7a arm64 x86"
+FF_ACT_ARCHS_ALL="armv7a arm64 x86 x86_64"
 if [ -z "$FF_TARGET" ]; then
     echo "You must specific an architecture 'arm64, armv7a, x86, x86_64, ...'.\n"
     exit 1
@@ -98,7 +98,7 @@ case "$FF_TARGET" in
     ;;
     all|all64)
 	build aarch64-linux-android arm64 android-arm64 21
-	# build x86_64-linux-android x86_64 android-x86_64 21
+	build x86_64-linux-android x86_64 android-x86_64 21
 	build armv7a-linux-androideabi armv7a android-arm 21
 	build i686-linux-android x86 android-x86 21
     ;;

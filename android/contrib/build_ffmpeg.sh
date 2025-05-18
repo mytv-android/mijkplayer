@@ -203,7 +203,7 @@ fi
 
 # 开启debug的话 --disable-optimizations --disable-small
 FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-optimizations"
-FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-debug"
+FF_CFG_FLAGS="$FF_CFG_FLAGS --disable-debug"
 FF_CFG_FLAGS="$FF_CFG_FLAGS --enable-small"
 
 #--------------------
